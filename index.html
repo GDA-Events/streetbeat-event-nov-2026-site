@@ -34,7 +34,7 @@
     input.removeAttribute('aria-invalid'); status.textContent = 'Apertura della proposta…';
     let stage = 'download';
     try {
-      const response = await fetch('proposal.bin?v=c468b7738744d6a5', {cache:'no-store', credentials:'omit'});
+      const response = await fetch('proposal.bin?v=2a1f31e9a7950059', {cache:'no-store', credentials:'omit'});
       if (!response.ok) throw new Error('Download failed');
       const envelope = new Uint8Array(await response.arrayBuffer());
       if (new TextDecoder().decode(envelope.slice(0,8)) !== 'GDAEVT01') throw new Error('Invalid package');
